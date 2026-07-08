@@ -1,1 +1,75 @@
-<h1> Dimond Price Will be {{final_result}} </h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="result-container">
+
+    <div class="result-card">
+
+        <h1>💎 Prediction Completed</h1>
+
+        <p style="font-size:20px;margin-bottom:30px;color:#ddd;">
+            Estimated Market Price
+        </p>
+
+        <div class="result-price">
+
+            ₹ {{ final_result }}
+
+        </div>
+
+        <hr style="margin:30px 0;border-color:rgba(255,255,255,.2);">
+
+        <div style="text-align:left;line-height:2;">
+
+            <h3 style="color:#FFD700;">Model Information</h3>
+
+            <p>✔ Model : Ridge Regression</p>
+
+            <p>✔ Pipeline : End-to-End MLOps</p>
+
+            <p>✔ Prediction Status : Successful</p>
+
+            <p>✔ Framework : Flask</p>
+
+        </div>
+
+        <div style="margin-top:40px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+
+            <a href="/predict" class="predict-btn">
+
+                Predict Another
+
+            </a>
+
+            <a href="/" class="home-btn">
+
+                Home
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

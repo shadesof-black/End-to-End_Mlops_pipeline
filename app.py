@@ -25,15 +25,16 @@ def predict_datapoint():
             color=request.form.get("color"),
             clarity=request.form.get("clarity")
         )
-        final_data=data.get_data_as_dataframe()
+        final_data = data.get_data_as_dataframe()
 
-        predict_pipeline=PredictPipeline()
+        predict_pipeline = PredictPipeline()
 
-        pred=predict_pipeline.predict(final_data)
+        pred = predict_pipeline.predict(final_data)
 
-        result=round(pred[0],2)
+        # Always display a positive price
+        result = round(abs(float(pred[0])), 2)
 
-        return render_template("result.html",final_result=result)
+        return render_template("result.html", final_result=result)
 
 
 
