@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     gcc \
     g++ \
+    git \
     libabsl-dev \
     pybind11-dev \
     && rm -rf /var/lib/apt/lists/*
