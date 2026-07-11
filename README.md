@@ -1,32 +1,67 @@
 # 💎 End-to-End Diamond Price Prediction MLOps Pipeline
 
-An end-to-end Machine Learning Operations (MLOps) project that predicts diamond prices using a production-ready ML pipeline. The project demonstrates the complete ML lifecycle—from data versioning and model training to workflow orchestration and deployment using modern MLOps tools. :contentReference[oaicite:0]{index=0}
+<p align="center">
+An end-to-end <b>Machine Learning Operations (MLOps)</b> project that predicts diamond prices using a production-ready machine learning pipeline. This project demonstrates the complete ML lifecycle—from data versioning and model training to workflow orchestration and cloud deployment using modern MLOps tools.
+</p>
+
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.8-blue)
+![Flask](https://img.shields.io/badge/Flask-Web_App-black)
+![Airflow](https://img.shields.io/badge/Apache_Airflow-Orchestration-red)
+![MLflow](https://img.shields.io/badge/MLflow-Experiment_Tracking-blue)
+![DVC](https://img.shields.io/badge/DVC-Data_Versioning-green)
+![Docker](https://img.shields.io/badge/Docker-Container-blue)
+![Render](https://img.shields.io/badge/Deployment-Render-success)
+
+</p>
 
 ---
 
-## 🌐 Live Demo
+# 🚀 Live Demo
 
-🚀 **Web Application:** https://diamond-price-app-latest.onrender.com/
+🌐 **Web Application**
 
-📂 **GitHub Repository:** https://github.com/shadesof-black/End-to-End_Mlops_pipeline.git
+https://diamond-price-app-latest.onrender.com/
+
+📂 **GitHub Repository**
+
+https://github.com/shadesof-black/End-to-End_Mlops_pipeline
+
+---
+
+# 📚 Table of Contents
+
+- Project Overview
+- Tech Stack
+- Project Structure
+- Pipeline Architecture
+- Workflow
+- Screenshots
+- Features
+- Run Locally
+- Docker
+- Future Improvements
+- Author
 
 ---
 
 # 📌 Project Overview
 
-This project automates the complete machine learning workflow for predicting diamond prices.
+This project automates the complete machine learning workflow for predicting diamond prices using modern MLOps practices.
 
-It includes:
+The pipeline includes:
 
 - ✅ Data Ingestion
 - ✅ Data Validation
 - ✅ Data Transformation
+- ✅ Feature Engineering
 - ✅ Model Training
 - ✅ Model Evaluation
-- ✅ Model Selection
+- ✅ Best Model Selection
 - ✅ Data Version Control (DVC)
 - ✅ Experiment Tracking (MLflow)
-- ✅ Workflow Orchestration (Apache Airflow)
+- ✅ Workflow Automation (Apache Airflow)
 - ✅ Flask Web Application
 - ✅ Docker Containerization
 - ✅ Cloud Deployment
@@ -35,7 +70,8 @@ It includes:
 
 # 🛠 Tech Stack
 
-### Machine Learning
+## Machine Learning
+
 - Python
 - Scikit-Learn
 - XGBoost
@@ -44,19 +80,23 @@ It includes:
 - Pandas
 - NumPy
 
-### MLOps
+## MLOps
+
 - Apache Airflow
 - DVC
 - MLflow
 - Docker
 
-### Backend
+## Backend
+
 - Flask
 
-### Deployment
+## Deployment
+
 - Render
 
-### Version Control
+## Version Control
+
 - Git
 - GitHub
 
@@ -64,7 +104,7 @@ It includes:
 
 # 📂 Project Structure
 
-```
+```text
 End-to-End_Mlops_pipeline
 │
 ├── airflow/
@@ -82,108 +122,103 @@ End-to-End_Mlops_pipeline
 
 ---
 
-# 🔄 Complete MLOps Pipeline
+# 🔄 Pipeline Architecture
 
-```
-Raw Dataset
-      │
-      ▼
-Data Ingestion
-      │
-      ▼
-Data Validation
-      │
-      ▼
-Data Transformation
-      │
-      ▼
-Feature Engineering
-      │
-      ▼
-Model Training
-      │
-      ▼
-Model Evaluation
-      │
-      ▼
-Best Model Selection
-      │
-      ▼
-Model Serialization
-      │
-      ▼
-Flask Prediction API
-      │
-      ▼
-Web Deployment
+```text
+                Raw Dataset
+                     │
+                     ▼
+             Data Ingestion
+                     │
+                     ▼
+            Data Validation
+                     │
+                     ▼
+         Data Transformation
+                     │
+                     ▼
+        Feature Engineering
+                     │
+                     ▼
+      Multiple Model Training
+                     │
+                     ▼
+      Best Model Selection
+                     │
+                     ▼
+        MLflow Experiment Tracking
+                     │
+                     ▼
+         Model Serialization
+                     │
+                     ▼
+         Flask Prediction API
+                     │
+                     ▼
+          Cloud Deployment
 ```
 
 ---
 
 # ⚙ Workflow
 
-### 1️⃣ Data Ingestion
+## 📥 Data Ingestion
 
-- Reads raw diamond dataset
-- Splits train/test data
-- Stores processed files
-
----
-
-### 2️⃣ Data Transformation
-
-- Missing value handling
-- Feature preprocessing
-- Encoding categorical variables
-- Feature scaling
+- Loads the raw dataset
+- Splits data into training and testing datasets
+- Stores processed data as artifacts
 
 ---
 
-### 3️⃣ Model Training
+## 🔄 Data Transformation
 
-Multiple regression algorithms are trained.
+- Handles missing values
+- Encodes categorical features
+- Scales numerical features
+- Performs feature engineering
 
-Examples:
+---
+
+## 🤖 Model Training
+
+Multiple regression algorithms are trained and compared:
 
 - Linear Regression
-- Random Forest
 - Decision Tree
+- Random Forest
 - XGBoost
 - CatBoost
 - LightGBM
 
-The best performing model is automatically selected.
+The best-performing model is automatically selected and saved.
 
 ---
 
-### 4️⃣ Experiment Tracking
+## 📊 MLflow Experiment Tracking
 
-MLflow tracks:
+MLflow is used to track:
 
-- Parameters
-- Metrics
-- Model artifacts
+- Model parameters
+- Performance metrics
 - Training history
+- Model artifacts
 
 ---
 
-### 5️⃣ Data Versioning
+## 📦 Data Version Control (DVC)
 
-DVC tracks:
+DVC is used for:
 
-- Dataset versions
-- Pipeline stages
-- Artifacts
-
-Ensuring reproducible machine learning experiments.
+- Dataset versioning
+- Pipeline versioning
+- Artifact management
+- Reproducible ML experiments
 
 ---
 
-### 6️⃣ Workflow Automation
+## ⚙ Apache Airflow
 
-Apache Airflow orchestrates the complete ML pipeline.
-
-Tasks include:
+Apache Airflow automates the complete ML pipeline by orchestrating:
 
 - Data Ingestion
 - Data Transformation
@@ -192,88 +227,64 @@ Tasks include:
 
 ---
 
-### 7️⃣ Model Deployment
+## 🌐 Model Deployment
 
 The trained model is deployed using Flask.
 
 Users can:
 
 - Enter diamond specifications
-- Predict price instantly
-- Access the application through a web interface
+- Predict the estimated price
+- Access the application through a responsive web interface
 
 ---
 
-# 📷 Screenshots
+# 📸 Project Screenshots
 
 ## 🏠 Home Page
 
-> Replace with your screenshot
-
-```markdown
 ![Home Page](images/home.png)
-```
 
 ---
 
 ## 📋 Prediction Form
 
-```markdown
 ![Prediction Form](images/form.png)
-```
 
 ---
 
 ## 💰 Prediction Result
 
-```markdown
 ![Prediction Result](images/result.png)
-```
 
 ---
 
-
 ## ✅ Airflow Successful Pipeline
 
-```markdown
 ![Airflow Success](images/airflow_success.png)
-```
 
 ---
 
 ## 🏆 Best Model Selection
 
-```markdown
 ![Best Model](images/best_model_terminal.png)
-```
 
 ---
 
-# 🚀 Deployment
+# ✨ Features
 
-The application is deployed on Render.
-
-### Live URL
-
-https://diamond-price-app-latest.onrender.com/
-
----
-
-# 📊 Features
-
-- End-to-End ML Pipeline
-- Modular Project Structure
-- Production Ready Code
-- Automated Model Training
-- Multiple Model Comparison
+- End-to-End Machine Learning Pipeline
+- Automated Data Processing
+- Modular Code Structure
 - Automatic Best Model Selection
-- Airflow Workflow Automation
-- DVC Version Control
+- Apache Airflow Workflow Automation
 - MLflow Experiment Tracking
+- DVC Data Versioning
 - Flask Prediction API
 - Responsive User Interface
 - Docker Support
 - Cloud Deployment
+- Production-ready Architecture
 
 ---
 
@@ -291,15 +302,15 @@ Move into the project
 cd End-to-End_Mlops_pipeline
 ```
 
-Create virtual environment
+Create a virtual environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate environment
+Activate the virtual environment
 
-### Linux
+### Linux/macOS
 
 ```bash
 source venv/bin/activate
@@ -317,15 +328,15 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Run application
+Run the application
 
 ```bash
 python app.py
 ```
 
-Open
+Open your browser and visit:
 
-```
+```text
 http://localhost:8000
 ```
 
@@ -333,13 +344,13 @@ http://localhost:8000
 
 # 🐳 Docker
 
-Build image
+Build the Docker image
 
 ```bash
 docker build -t diamond-price-app .
 ```
 
-Run container
+Run the container
 
 ```bash
 docker run -p 8000:8000 diamond-price-app
@@ -347,26 +358,37 @@ docker run -p 8000:8000 diamond-price-app
 
 ---
 
+# 🚀 Deployment
+
+The application is deployed on **Render**.
+
+### Live Demo
+
+https://diamond-price-app-latest.onrender.com/
+
+---
+
 # 🎯 Future Improvements
 
 - CI/CD using GitHub Actions
 - Kubernetes Deployment
-- AWS Cloud Deployment
+- AWS Deployment
 - Model Monitoring
 - Data Drift Detection
-- Automated Retraining
+- Automated Model Retraining
 - REST API Documentation
 
 ---
 
 # 👨‍💻 Author
 
-**Rahul Raj**
+## Rahul Raj
 
 
-GitHub:
-https://github.com/shadesof-black
+GitHub: https://github.com/shadesof-black
 
 ---
 
-# ⭐ If you found this project useful, don't forget to Star the repository!
+# ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub. It helps others discover the project and supports future improvements.
